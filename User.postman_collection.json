@@ -1,0 +1,418 @@
+{
+	"info": {
+		"_postman_id": "3c10cf24-de1b-4e59-9d75-4137bc86d13b",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20055585"
+	},
+	"item": [
+		{
+			"name": "Add new doctor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluLTEiLCJleHAiOjE2NTgyMjkwOTh9.tinQpuvdwbBZuuEuk6yZEpBzRjJzECRyaAbjb8Z1WzY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"dr. Angga\",\r\n  \"speciality\": \"Penyakit Dalam\",\r\n  \"phone\": \"08123456789\",\r\n  \"password\": \"drangga\",\r\n  \"role\": \"Doctor\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shaggy-badger-99.a276.dcdg.xyz/users",
+					"protocol": "https",
+					"host": [
+						"shaggy-badger-99",
+						"a276",
+						"dcdg",
+						"xyz"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new doctor with empty name",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluLTEiLCJleHAiOjE2NTgyMjkwOTh9.tinQpuvdwbBZuuEuk6yZEpBzRjJzECRyaAbjb8Z1WzY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"\",\r\n  \"speciality\": \"Penyakit Dalam\",\r\n  \"phone\": \"089521214183\",\r\n  \"password\": \"drangga\",\r\n  \"role\": \"Doctor\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shaggy-badger-99.a276.dcdg.xyz/users",
+					"protocol": "https",
+					"host": [
+						"shaggy-badger-99",
+						"a276",
+						"dcdg",
+						"xyz"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new doctor with empty speciality",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluLTEiLCJleHAiOjE2NTgyMjkwOTh9.tinQpuvdwbBZuuEuk6yZEpBzRjJzECRyaAbjb8Z1WzY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"dr. Angga\",\r\n  \"speciality\": \"\",\r\n  \"phone\": \"0895213414141\",\r\n  \"password\": \"drangga\",\r\n  \"role\": \"Doctor\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shaggy-badger-99.a276.dcdg.xyz/users",
+					"protocol": "https",
+					"host": [
+						"shaggy-badger-99",
+						"a276",
+						"dcdg",
+						"xyz"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new doctor with empty phone number",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluLTEiLCJleHAiOjE2NTgyMjkwOTh9.tinQpuvdwbBZuuEuk6yZEpBzRjJzECRyaAbjb8Z1WzY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"dr. Angga\",\r\n  \"speciality\": \"Penyakit Dalam\",\r\n  \"phone\": \"\",\r\n  \"password\": \"drangga\",\r\n  \"role\": \"Doctor\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shaggy-badger-99.a276.dcdg.xyz/users",
+					"protocol": "https",
+					"host": [
+						"shaggy-badger-99",
+						"a276",
+						"dcdg",
+						"xyz"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new doctor with empty password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluLTEiLCJleHAiOjE2NTgyMjkwOTh9.tinQpuvdwbBZuuEuk6yZEpBzRjJzECRyaAbjb8Z1WzY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"dr. Angga\",\r\n  \"speciality\": \"Penyakit Dalam\",\r\n  \"phone\": \"081267856473\",\r\n  \"password\": \"\",\r\n  \"role\": \"Doctor\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shaggy-badger-99.a276.dcdg.xyz/users",
+					"protocol": "https",
+					"host": [
+						"shaggy-badger-99",
+						"a276",
+						"dcdg",
+						"xyz"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new doctor with empty role",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluLTEiLCJleHAiOjE2NTgyMjkwOTh9.tinQpuvdwbBZuuEuk6yZEpBzRjJzECRyaAbjb8Z1WzY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"dr. Angga\",\r\n  \"speciality\": \"Penyakit Dalam\",\r\n  \"phone\": \"081267856473\",\r\n  \"password\": \"bebekgoreng\",\r\n  \"role\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shaggy-badger-99.a276.dcdg.xyz/users",
+					"protocol": "https",
+					"host": [
+						"shaggy-badger-99",
+						"a276",
+						"dcdg",
+						"xyz"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluLTEiLCJleHAiOjE2NTgyMjkwOTh9.tinQpuvdwbBZuuEuk6yZEpBzRjJzECRyaAbjb8Z1WzY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://shaggy-badger-99.a276.dcdg.xyz/users/doctor-3",
+					"protocol": "https",
+					"host": [
+						"shaggy-badger-99",
+						"a276",
+						"dcdg",
+						"xyz"
+					],
+					"path": [
+						"users",
+						"doctor-3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by invalid id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluLTEiLCJleHAiOjE2NTgyMjkwOTh9.tinQpuvdwbBZuuEuk6yZEpBzRjJzECRyaAbjb8Z1WzY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://shaggy-badger-99.a276.dcdg.xyz/users/doctor-a",
+					"protocol": "https",
+					"host": [
+						"shaggy-badger-99",
+						"a276",
+						"dcdg",
+						"xyz"
+					],
+					"path": [
+						"users",
+						"doctor-a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

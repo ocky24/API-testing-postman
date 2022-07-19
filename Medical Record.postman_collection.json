@@ -1,0 +1,18 @@
+{
+	"info": {
+		"_postman_id": "e6834500-bb7d-478b-8c7d-1dcc6d53f282",
+		"name": "Medical Record",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20055585"
+	},
+	"item": [
+		{
+			"name": "Add medical report",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

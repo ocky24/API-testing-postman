@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "b6427a0d-6d93-413d-a7fd-d7d9f29755c7",
+		"name": "login for token",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20055585"
+	},
+	"item": [
+		{
+			"name": "login with valid id dan password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"admin-1\",\r\n  \"password\": \"root\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shaggy-badger-99.a276.dcdg.xyz/login",
+					"protocol": "https",
+					"host": [
+						"shaggy-badger-99",
+						"a276",
+						"dcdg",
+						"xyz"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
